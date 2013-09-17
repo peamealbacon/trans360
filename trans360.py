@@ -23,7 +23,6 @@ parser.add_argument("-o", "--outdir", help="Specify output directory (default is
 parser.add_argument("-i", "--indir", help="Specify input directory (default is ./)")
 parser.add_argument("-c", "--cleanup", help="Turn cleanup mode on (deletes original files)", action="store_true")
 parser.add_argument("-s", "--sort", help="Sort mode. Moves existing compliant files to OUTDIR (Must be used with -o/--oudir)", action="store_true")
-parser.add_argument("-f", "--force", help="Force overwriting and ignore similar files", action="store_true")
 args = parser.parse_args()
 
 if args.sort and args.outdir:

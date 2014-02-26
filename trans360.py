@@ -15,7 +15,6 @@ indir = '.'
 sort = False
 cleanup = False
 coedc_aac = None
-force = False
 
 # Get arguments and flags
 parser =  argparse.ArgumentParser()
@@ -30,8 +29,6 @@ if args.sort and args.outdir:
 	print "Sort mode on. Moving compliant files to: " + outdir
 elif args.sort and not args.outdir:
 	sys.exit("Invalid option. Sort mode requires OUTDIR to be set")
-else:
-	pass
 
 if args.indir:
 	indir = args.indir
@@ -46,13 +43,6 @@ else:
 if args.cleanup:
 	cleanup = True
 	print "Cleanup mode on"
-else:
-	pass
-
-if args.force:
-	force = True
-else:
-	pass
 
 #Class for multi-level dicts
 class nd(dict):
